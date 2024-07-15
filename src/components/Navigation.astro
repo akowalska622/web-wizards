@@ -1,7 +1,63 @@
+---
+const currentUrl = Astro.url.pathname;
+---
+
 <nav>
-  <a href="/">Dlaczego?</a>
-  <a href="/about">O mnie</a>
-  <a href="/prices">Cennik</a>
-  <a href="/my-work">Realizacje</a>
-  <a href="/contact">Kontakt</a>
+  <ul>
+    <li>
+      <a class={currentUrl === '/' ? 'active' : ''} href="/">Dlaczego?</a>
+    </li>
+    <li>
+      <a class={currentUrl === '/about' ? 'active' : ''} href="/about"
+        >O mnie</a>
+    </li>
+    <li>
+      <a class={currentUrl === '/prices' ? 'active' : ''} href="/prices"
+        >Cennik</a>
+    </li>
+    <li>
+      <a class={currentUrl === '/my-work' ? 'active' : ''} href="/my-work"
+        >Realizacje</a>
+    </li>
+    <li>
+      <a class={currentUrl === '/contact' ? 'active' : ''} href="/contact"
+        >Kontakt</a>
+    </li>
+  </ul>
 </nav>
+
+<style>
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    a {
+      color: white;
+      text-decoration: none;
+      font-size: 24px;
+    }
+
+    .active {
+      background-image: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 400%;
+      background-position: 0%;
+      font-weight: 700;;
+    }
+
+    a:hover {
+      background-image: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 400%;
+      background-position: 0%;
+    }
+  }
+</style>
