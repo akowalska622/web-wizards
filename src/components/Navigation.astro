@@ -3,40 +3,20 @@ const currentUrl = Astro.url.pathname;
 ---
 
 <nav>
-  <ul>
-    <li>
-      <a class={currentUrl === '/' ? 'active' : ''} href="/">Dlaczego?</a>
-    </li>
-    <li>
-      <a class={currentUrl === '/about' ? 'active' : ''} href="/about"
-        >O mnie</a>
-    </li>
-    <li>
-      <a class={currentUrl === '/prices' ? 'active' : ''} href="/prices"
-        >Cennik</a>
-    </li>
-    <li>
-      <a class={currentUrl === '/my-work' ? 'active' : ''} href="/my-work"
-        >Realizacje</a>
-    </li>
-    <li>
-      <a class={currentUrl === '/contact' ? 'active' : ''} href="/contact"
-        >Kontakt</a>
-    </li>
-  </ul>
+  <a class={currentUrl === '/' ? 'active' : ''} href="/">Po co mi strona?</a>
+  <a class={currentUrl === '/about' ? 'active' : ''} href="/about">O mnie</a>
+  <a class={currentUrl === '/prices' ? 'active' : ''} href="/prices">Cennik</a>
+  <a class={currentUrl === '/my-work' ? 'active' : ''} href="/my-work">Realizacje</a>
+  <a class={currentUrl === '/contact' ? 'active' : ''} href="/contact">Kontakt</a>
 </nav>
 
 <style>
   nav {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    margin-right: 8rem;
+    gap: 1rem;
 
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
     a {
       color: white;
       text-decoration: none;
@@ -49,7 +29,7 @@ const currentUrl = Astro.url.pathname;
       -webkit-text-fill-color: transparent;
       background-size: 400%;
       background-position: 0%;
-      font-weight: 700;;
+      font-weight: 700;
     }
 
     a:hover {
