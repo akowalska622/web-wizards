@@ -8,17 +8,52 @@ import Layout from '../layouts/Layout.astro';
 			<tr>
 				<th>Typ strony</th>
 				<th>Opis usługi</th>
-				<th>Cena</th>
+				<th>Cena (PLN&nbsp;netto)</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr>
-				<th>Wizytówka</th>
-				<th>	
-					Krótka strona zawierająca przedstawienie usługodawcy lub firmy i dane kontaktowe
-				</th>
-				<th>Wizytówka</th>
+				<td>Wizytówka</td>
+				<td>Krótka strona zawierająca przedstawienie usługodawcy lub firmy i dane kontaktowe</td>
+				<td>500 - 1000</td>
+			</tr>
+			<tr>
+				<td>One page</td>
+				<td>Strona podobna do wizytówki, natomiast posiadająca więcej zakładek (np. profil firmy, jej osiągnięcia, galeria zdjęć, opinie klientów)</td>
+				<td>1000 - 2000</td>
+			</tr>
+			<tr>
+				<td>Landing page</td>
+				<td>Strona o przeznaczeniu sprzedażowym, zazwyczaj tworzona przy budowie aplikacji w celach marketingowych</td>
+				<td>1500 - 3000</td>
+			</tr>
+			<tr>
+				<td>Witryna z podstronami</td>
+				<td>Strona wraz z rozbudowanymi informacjami o działalności, rozbudowana wersja strony typu “one page”</td>
+				<td>2000 - 5000</td>
+			</tr>
+			<tr>
+				<td>Opieka nad stroną</td>
+				<td>Zalecane w przypadku dużych i/lub dynamicznie zmieniających się witryn</td>
+				<td>100 - 500 / miesiąc</td>
 			</tr>
 		</tbody>
 	</table>
 </Layout>
+
+<style>
+	table {
+		border-collapse: collapse;
+		width: 90%;
+	}
+	
+	td, th {
+		border: var(--border-primary);
+		text-align: left;
+		padding: 8px;
+	}
+	
+	tr:nth-child(even) {
+		background-color: var(--gray)
+	}
+	</style>
