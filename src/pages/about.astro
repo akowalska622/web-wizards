@@ -1,7 +1,38 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import CardGrid from '../components/CardGrid.astro';
+
+const cardsData = [
+  {
+    title: 'Doświadczenie',
+    body: 'Posiadam wieloletnie doświadczenie w projektowaniu i tworzeniu stron i aplikacji internetowych',
+  },
+  {
+    title: 'Dbałość o detale',
+    body: 'Przykładam dużą wagę do detali, aby każdy projekt był zgodny z najlepszymi standardami',
+  },
+  {
+    title: 'Wysoka responsywność',
+    body: 'Kontakt z klientem jest dla mnie bardzo ważny, zawsze staram się odpowiadać na wiadomości jak najszybciej',
+  },
+  {
+    title: 'Rozwój',
+    body: 'Stale poszerzam swoje kompetencje, aby móc tworzyć coraz lepsze projekty',
+  },
+  {
+    title: 'Dostępność',
+    body: 'Wszystkie moje projekty spełniają standardy dostępności dla niepełnosprawnych użytkowników',
+  },
+  {
+    title: 'Konkurencyjne ceny',
+    body: 'Skupiam się na tworzeniu wartościowych projektów, które są dostępne dla każdego klienta',
+  },
+];
 ---
 
 <Layout title="Web Wizards">
-	<p>about</p>
+  <CardGrid>
+    {cardsData.map((card) => <Card title={card.title} body={card.body} />)}
+  </CardGrid>
 </Layout>

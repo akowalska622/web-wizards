@@ -1,19 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import CardGrid from '../components/CardGrid.astro';
+
+const cardsData = [
+  { title: 'Wiarygodność i zaufanie', body: 'Profesjonalna strona internetowa daje Twojej firmie autorytet i buduje zaufanie wśród klientów' },
+  { title: 'Wizerunek marki', body: 'Klienci często szukają informacji online, dobrze zaprojektowana witryna tworzy pozytywny wizerunek firmy' },
+  { title: 'Dostępność 24/7', body: 'Strona internetowa umożliwia klientom kontakt z Tobą i zapoznanie się z Twoją ofertą w dowolnym momencie' },
+  { title: 'Marketing i promocja', body: 'Strona internetowa jest doskonałym narzędziem do prowadzenia kampanii marketingowych (np. SEO, Google Ads)' },
+  { title: 'Obsługa klienta', body: 'Strona może zwierać sekcję FAQ, pradniki czy blog. Pozwala też na szybką komunikację' },
+  { title: 'Konkurencyjność', body: 'Posiadając profesjonalną, przyjemną w odbiorze stronę internetową wyróżniasz się wśród konkurencji' },
+];
 ---
 
 <Layout title="Web Wizards">
+	<CardGrid>
+		{cardsData.map(card => <Card title={card.title} body={card.body} />)}
+	</CardGrid>
 </Layout>
-
-<style>
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;;
-	}
-
-	h3 {
-		text-align: center;
-	}
-</style>
